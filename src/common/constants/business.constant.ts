@@ -1,0 +1,1 @@
+export const REFUND_PERCENT = 0.9;
