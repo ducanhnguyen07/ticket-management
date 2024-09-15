@@ -9,6 +9,7 @@ import ms from 'ms';
 import { RoleModule } from '../role/role.module';
 import { UserService } from '../../src/user/user.service';
 import { LoggerService } from 'src/logging/log.service';
+import { RedisService } from '../../src/redis/redis.service';
 
 @Module({
   imports: [
@@ -31,6 +32,7 @@ import { LoggerService } from 'src/logging/log.service';
     AuthService,
     UserService,
     LoggerService,
+    RedisService,
   ],
   exports: [AuthService],
 })

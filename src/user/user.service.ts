@@ -35,6 +35,15 @@ export class UserService {
     }
   }
 
+  findUserByToken = async (refreshToken: string): Promise<User | undefined> => {
+    const userByToken = await this.userRepository.findOne({
+      where: {
+        refreshToken: refreshToken,
+      },
+    });
+    return userByToken;
+  };
+
   update(id: number, updateUserDto: UpdateUserDto) {
     return `This action updates a #${id} user`;
   }

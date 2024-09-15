@@ -17,6 +17,7 @@ import { LoggingInterceptor } from './common/intercepters/logging.intercepter';
 import { ScheduleModule } from '@nestjs/schedule';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
 import { ThrottlerConfig } from './config/throttler.config';
+import { RedisService } from './redis/redis.service';
 
 @Module({
   imports: [
@@ -51,6 +52,7 @@ import { ThrottlerConfig } from './config/throttler.config';
       useClass: ThrottlerGuard,
     },
     JwtService,
+    RedisService,
   ],
 })
 export class AppModule {}
