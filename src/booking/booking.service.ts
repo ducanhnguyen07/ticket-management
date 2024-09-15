@@ -11,7 +11,7 @@ import { Ticket } from '../../src/ticket/entities/ticket.entity';
 import { TicketStatusConstant } from '../../src/common/constants/ticket-status.contant';
 import { User } from '../../src/user/entities/user.entity';
 import { REFUND_PERCENT } from '../../src/common/constants/business.constant';
-import { ResponseTicketDto } from 'src/ticket/dto/response/response-ticket.dto';
+import { ResponseTicketDto } from '../../src/ticket/dto/response/response-ticket.dto';
 import { Cron, CronExpression } from '@nestjs/schedule';
 
 @Injectable()
